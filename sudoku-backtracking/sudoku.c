@@ -30,7 +30,6 @@ int menu_opcoes(void) {
     printf("    (2) Sudoku com analise          \n");
     printf("    (3) sair                        \n");
     printf(" _________________________________  \n");
-
     printf("\n Digite a opcao desejada: ");
     scanf("%d", &opcao);
     return opcao;
@@ -140,9 +139,11 @@ int existe_no_subquadro(int quadro[TAM][TAM], int inicio_linha, int inicio_colun
  * ser inserido na determinada posicao da matriz.
  */
 int verifica_posicao(int quadro[TAM][TAM], int linha, int coluna, int num) {
-    return !existe_na_linha(quadro, linha, num)
-    && !existe_na_coluna(quadro, coluna, num)
-    && !existe_no_subquadro(quadro, linha - (linha % 3), coluna - (coluna %3), num);
+    if(!existe_na_coluna(quadro, coluna, num) && !existe_na_linha(quadro, linha, num) && 
+       !existe_no_subquadro(quadro, linha - (linha % 3), coluna - (coluna %3), num)){
+        return 1;
+    }
+    return 0;
 }
 
 

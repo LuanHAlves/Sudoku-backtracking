@@ -23,24 +23,24 @@ int main(int argc, char const *argv[]) {
 
         switch(opcao){
         	case 1:
-        	if (solucao_sudoku(quadro, ANALISE_DESATIVADO)) {
-        		printf("\n\n  Solucao do Sudoku:\n\n");
-		        imprime_quadro(quadro, ANALISE_DESATIVADO);
-		    } else {
-		        printf(" Nao ha solucao possive :( ");
-		    }
+	        	if (solucao_sudoku(quadro, ANALISE_DESATIVADO)) {
+	        		printf("\n\n  Solucao do Sudoku:\n\n");
+			        imprime_quadro(quadro, ANALISE_DESATIVADO);
+			    } else {
+			        printf(" Nao ha solucao possive :( ");
+			    }
         	break;
 
         	case 2:
-        	if (solucao_sudoku(quadro, ANALISE_ATIVADO)) {
-        		printf("\n\n Solucao do Sudoku (Modo Analise):\n\n");
-		        imprime_quadro(quadro, ANALISE_ATIVADO);
-		    } else {
-		        printf(" Nao ha solucao possive :( ");
-		    }
+	        	if (solucao_sudoku(quadro, ANALISE_ATIVADO)) {
+	        		printf("\n\n Solucao do Sudoku (Modo Analise):\n\n");
+			        imprime_quadro(quadro, ANALISE_ATIVADO);
+			    } else {
+			        printf(" Nao ha solucao possive :( ");
+			    }
 		    break;
 		    case 3:
-		    	printf("\n\t--- Fim da execucao! --- \n\n");
+		    	printf("\n\t--- Fim da execucao! --- \n\n"); 
 		    	exit(1);
 		    break;
 		    default:
